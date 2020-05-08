@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	{%block title%}
+	<title>MOVIE HOME</title>
+	{%endblock%}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 50px">
+  <a class="navbar-brand" href="/home">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    	<li class="nav-item">
+        <a class="nav-link" href="/form">ADD_MOVIE</a>
+      </li>
+    	<li class="nav-item">
+        <a class="nav-link" href="/seelist">SEE_LIST</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/aboutus">ABOUT US</a>
+      </li>
+      
+        
+      
+    </ul>
+    
+  </div>
+</nav>
+	
+	<div class='container'>
+		<div class='jumbotron'>
+			{%block abc%}
+	<h1>Suggest a movie here.Please be precise like the PROFESSOR.</h1>
+	
+	<form method="POST">
+	{{x.as_p}}
+	{%csrf_token%}
+	<input type='submit' value='Watch this' style="margin-left: 90px">
+	{%endblock%}
+	</div>
+	</div>
+</form>
+
+</body>
+</html>

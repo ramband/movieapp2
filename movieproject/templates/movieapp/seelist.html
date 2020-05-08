@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<title>LIST</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 50px">
+  <a class="navbar-brand" href="/home">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    	<li class="nav-item">
+        <a class="nav-link" href="/form">ADD_MOVIE</a>
+      </li>
+    	<li class="nav-item">
+        <a class="nav-link" href="/seelist">SEE_LIST</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/aboutus">ABOUT US</a>
+      </li>
+      
+        
+      
+    </ul>
+    
+  </div>
+</nav>
+	
+<h2 style="text-align: center;background: orange;margin-bottom: 40px">Existing Suggestions....</h2>		
+			{%if x%}
+			<table>
+				<thead>
+					<th>RELEASE YEAR</th>
+					<th>MOVIE</th>
+					<th>HERO</th>
+					<th>HEROINE</th>
+					<TH>RATING</TH>
+				</thead>
+				{%for t in x%}
+				<tr>
+					<td>{{t.relyear}}</td>
+					<td>{{t.movname}}</td>
+					<td>{{t.hero}}</td>
+					<td>{{t.heroine}}</td>
+					<td>{{t.rating}}</td>
+
+				</tr>
+				{%endfor%}
+			</table>
+			{%endif%}
+		
+
+</body>
+</html>

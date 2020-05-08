@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<title>Home page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/mainhome.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/home">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="/aboutus">ABOUT US</a>
+      </li>
+      
+        
+      
+    </ul>
+    
+  </div>
+</nav>
+	<div class='container'>
+		<div class='jumbotron'>
+			<div class="spinner-grow text-primary" role="status">
+  
+</div>
+<div class="spinner-grow text-secondary" role="status">
+
+</div>
+<div class="spinner-grow text-success" role="status">
+  
+</div>
+<div class="spinner-grow text-danger" role="status">
+  
+</div>
+<div class="spinner-grow text-warning" role="status">
+  
+</div>
+<div class="spinner-grow text-info" role="status">
+  
+</div>
+<div class="spinner-grow text-light" role="status">
+ 
+</div>
+<div class="spinner-grow text-dark" role="status">
+  
+</div>
+			<h1>WELCOME TO MOVIE SUGGESTION PAGE</h1>
+			<h3>Suggest a movie to make your contribution for pichhi tagginchadam..</h3>
+			<button type="button" class="btn btn-primary btn-lg btn-block" style='background: yellow;'><a href="/form" style="color: red;">SUGGEST A MOVIE</a></button>
+			<button type="button" class="btn btn-primary btn-lg btn-block"><a href="/seelist" style="color: white;">SEE SUGGESTED LIST</a></button>
+
+			
+		</div>
+	</div>
+
+</body>
+</html>
